@@ -1,2 +1,9 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Appointment</h1>
+<br>
+<h2>This appointment is for <%=@appointment.pet.name%>.</h2>
+<br>
+<h2>Class: <%=@appointment.lesson.name%></h2>
+<br>
+<h2>Date: <%=@appointment.lesson.date%></h2>
+<br>
+<%=button_to "Cancel", @appointment, :method => :delete%>
