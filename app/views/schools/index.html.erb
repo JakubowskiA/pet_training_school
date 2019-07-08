@@ -1,5 +1,5 @@
 <% @schools.each do |school| %>
-<p>Name: <%= school.name %></p>
+<p>Name: <%= link_to school.name, school_path(school) %></p>
 <p>Location: <%= school.location %></p>
-<p>Description: <%= school.description %></p>
+
 <% end %>

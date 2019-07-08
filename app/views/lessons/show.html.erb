@@ -1,4 +1,5 @@
 <p>Name: <%= @lesson.name %></p>
-<p>Date: <%= @lesson.date %></p>
+<p>Date: <%= @lesson.date.to_date %></p>
+<p>Time: <%= @lesson.time %></p>
 <p>Capacity: <%= @lesson.capacity %></p>
-<p>Price: <%= @lesson.price %></p>
+<p>Price: $<%= @lesson.price %></p>

@@ -1,4 +1,4 @@
 <% @trainers.each do |trainer| %>
-<p>Name: <%= trainer.name %></p>
-<p>Bio: <%= trainer.bio %></p>
+<p><%= link_to trainer.name, trainer_path(trainer) %></p>
+
 <% end %>
