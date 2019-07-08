@@ -1,4 +1,12 @@
-<p>Name: <%=@school.name%></p>
-<p>Location: <%=@school.location%></p>
-<p>About <%=@school.name%>: <%=@school.description%></p>
+<h1><%=@school.name%></h1>
+<h3>Location: <%=@school.location%></h3>
+<h3>About <%=@school.name%>: <%=@school.description%></h3>
+<h3><%=@school.name%> offers the following courses</h3>
+<h4>
+<%@school.lessons.each do |lesson|%>
+<%=link_to lesson.name, lesson_path(lesson)%>
+<br>
+<% end %>
+</h4>
+
 

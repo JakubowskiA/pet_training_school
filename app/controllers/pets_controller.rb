@@ -7,7 +7,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     @pet.owner_id = session[:user].id
     @pet.save
-    if @pet.save
+    if @pet.valid
       redirect_to pet_path(@pet)
     else
       render :new

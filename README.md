@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this project is to connect petowners with schools that have training courses for their pets. This program provides petowners with an easy online way to get information about the schools, trainers, and courses for their pets.
 
-Things you may want to cover:
+#Motivation
 
-* Ruby version
+This project was assigned by Flatiron School. This project was motivated by finding a way to make it easy for people to find, evaluate, and book sessions for training their pets.
 
-* System dependencies
+#Installation
 
-* Configuration
+To use this program, go to your terminal and enter the following.
 
-* Database creation
+bundle install 
+rails db:migrate 
+rails db:seed
 
-* Database initialization
+Open a browser window and enter http://localhost:3000.
 
-* How to run the test suite
+#How to Use this Program
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
