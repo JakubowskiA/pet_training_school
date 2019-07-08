@@ -1,2 +1,13 @@
-<h1>Pets#new</h1>
-<p>Find me in app/views/pets/new.html.erb</p>
+<%=form_for @pet do |f| %>
+<%=f.label :name %>
+<%=f.text_field :name %>
+
+<%=f.label :age %>
+<%=f.text_field :age %>
+
+<%=f.label :gender %>
+<%=f.text_field :gender %>
+
+<%=f.submit "Submit" %>
+
+<% end %>
