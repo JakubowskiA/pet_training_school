@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+    @owner = Owner.find(params[:id])
     @appointment.create(appointment_params)
     if @appointment.save
       redirect_to appointment_path(@appointment)

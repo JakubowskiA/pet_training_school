@@ -1,3 +1,5 @@
+<h1>All Classes</h1>
+<br>
 <% @lessons.each do |lesson| %>
-<p>Name: <%= lesson.name %></p>
+<p><%= link_to lesson.name, lesson_path(lesson) %></p>
 <% end %>

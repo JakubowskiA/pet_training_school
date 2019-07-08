@@ -1,5 +1,5 @@
-<p>Name: <%= @lesson.name %></p>
-<p>Date: <%= @lesson.date.to_date %></p>
-<p>Time: <%= @lesson.time %></p>
+<h1><%= @lesson.name %></h1>
+<p>Date and time: <%= Time.at(@lesson.date).strftime("%B %e, %Y at %I:%M %p") %></p>
 <p>Capacity: <%= @lesson.capacity %></p>
 <p>Price: $<%= @lesson.price %></p>
+<p>About this class: <%= @lesson.description %></p>

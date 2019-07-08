@@ -1,9 +1,9 @@
-<h1>Appointment</h1>
+<h1>Your Pet's Class</h1>
 <br>
 <h2>This appointment is for <%=@appointment.pet.name%>.</h2>
 <br>
 <h2>Class: <%=@appointment.lesson.name%></h2>
 <br>
-<h2>Date: <%=@appointment.lesson.date%></h2>
+<h2>Date: <%=@appointment.lesson.date.strftime(%d%m%Y)%></h2>
 <br>
 <%=button_to "Cancel", @appointment, :method => :delete%>

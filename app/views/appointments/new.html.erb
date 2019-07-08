@@ -1,8 +1,8 @@
-<h1>Book a training class</h1>
+<h1>Book a class</h1>
 <br>
-<%form_for @appointment do |f|%>
+<%=form_for @appointment do |f|%>
 <label>Which pet is taking this class?</label>
-<%=collection_select(:appointment, :pet_id, Pet.all, :id, :name, prompt: true)%>
+<%=collection_select(:appointment, :pet_id, @owner.pets, :id, :name, prompt: true)%>
 <br>
 <label>Which class are you booking?</label>
 <%=collection_select(:appointment, :lesson_id, Lesson.all, :id, :name, prompt: true)%>

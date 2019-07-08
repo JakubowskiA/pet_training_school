@@ -1,1 +1,9 @@
-<p>Name: <%=@owner.name%></p>
+<h1><%=@owner.name%>'s Profile</h1>
+<h3>Username: <%=@owner.username%></h3>
+<h3><%=@owner.name%>'s Pets</h3>
+<p>
+<%@owner.pets.each do |pet|%>
+<%=link_to pet.name, pet_path(pet)%>
+<br>
+<% end %>
+</p>

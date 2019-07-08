@@ -4,7 +4,9 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = Pet.create(pet_params)
+    @pet = Pet.new(pet_params)
+    @pet.owner_id = session[:user].id
+    @pet.save
     if @pet.save
       redirect_to pet_path(@pet)
     else
