@@ -1,10 +1,13 @@
 class AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
+    @lessons = Lesson.all
+    @user = User.find(session[:user_id])
+    @user_pets = @user.pets
   end
 
   def create
-    @owner = Owner.find(params[:id])
+    @user = User.find(params[:id])
     @appointment.create(appointment_params)
     if @appointment.save
       redirect_to appointment_path(@appointment)
