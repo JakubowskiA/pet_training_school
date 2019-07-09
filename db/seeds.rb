@@ -28,10 +28,16 @@ s11 = School.create(name: "NY Clever K9 Inc. Dog Behavior Expert, Dog Training",
 #s11 = School.create(name: "", location: "", description: "", phone_number: 9175896296)
 
 #Trainers
-t1 = Trainer.create(name: "David", bio: "I love dogs. I have been training dogs of all ages for 10 years.", school_id: s1.id, username: "Davidtrainer", password_digest: "dogsrcool")
-t2 = Trainer.create(name: "Andrea", bio: "I am the cat whisperer. I will work with your cat to best suit their individual needs", school_id: s2.id, username: "CatWhisperer", password_digest: "cats3evr")
-t3 = Trainer.create(name: "Steve", bio: "I have 30+ years of experience training dogs. I specialize in obedience training.", school_id: s2.id, username: "SteveH", password_digest: "123abc")
-t4 = Trainer.create(name: "Kimberly", bio: "My name is Kimberly. I became interested in dog training and dog behavior early in my childhood while watching my father train our first dog. I am a Certified Master Dog Trainer and I have trained many different kinds of dogs and their owners.", school_id: s4.id, username: "Kimtrainer", password_digest: "kimdgny")
+t1 = Trainer.create(name: "David", bio: "I love dogs. I have been training dogs of all ages for 10 years.", school_id: s1.id)
+t2 = Trainer.create(name: "Andrea", bio: "I am the cat whisperer. I will work with your cat to best suit their individual needs", school_id: s2.id)
+t3 = Trainer.create(name: "Steve", bio: "I have 30+ years of experience training dogs. I specialize in obedience training.", school_id: s2.id)
+t4 = Trainer.create(name: "Kimberly", bio: "My name is Kimberly. I became interested in dog training and dog behavior early in my childhood while watching my father train our first dog. I am a Certified Master Dog Trainer and I have trained many different kinds of dogs and their owners.", school_id: s4.id)
+t5 = Trainer.create(name: "Kate Senisi", bio: "Kate’s specialty is working with dogs who are dealing with urban-specific behavior challenges including anxiety and aggression. Always taking an integrative approach, she develops behavior plans that are easy to implement and yield results.", school_id: s3.id)
+t6 = Trainer.create(name: "Annie Grossman", bio: "Annie loves to find fun and engaging ways to help both dogs and humans approach training as an exercise in better understanding all animal behavior. She specializes in working with puppies, teaching tricks, and prepping dogs for commercial work.", school_id: s3.id)
+t7 = Trainer.create(name: "Anna Ostroff", bio: "Anna loves making training enjoyable by giving humans and dogs the tools to communicate. She has worked in rescue since 2011, the majority at Mighty Mutts, where she serves as Community Outreach Coordinator, and helps with behavior cases.", school_id: s3.id)
+t8 = Trainer.create(name: "Andrea Arden", bio: "", school_id: s9.id)
+t9 = Trainer.create(name: "", bio: "", school_id: s.id, username: "", password_digest: "")
+t10 = Trainer.create(name: "", bio: "", school_id: s.id, username: "", password_digest: "")
 #Lessons
 l1 = Lesson.create(name: "Cool Tricks", date: DateTime.new(2019, 7, 28, 10, 00).to_s, capacity: 10, species: "dog", trainer_id: t1.id, school_id: s1.id, owner_participation: true, description: "Your dog will learn all sorts of cool new tricks!", price: 50)
 l2 = Lesson.create(name: "Ruby on Tails", date: DateTime.new(2019, 7, 28, 18, 30).to_s, capacity: 15, species: "dog", trainer_id: t1.id, school_id: s1.id, owner_participation: false, description: "Ruby on Rails for dogs", price: 17000)
