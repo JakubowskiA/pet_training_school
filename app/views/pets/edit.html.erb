@@ -1,0 +1,19 @@
+<h1>Edit a Pet</h1>
+<br>
+<%=form_for @pet do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br>
+<%=f.label :species%>
+<%=f.text_field :species%>
+<br>
+<%=f.label :age %>
+<%=f.text_field :age %>
+<br>
+<%=f.label :gender %>
+<%=f.text_field :gender %>
+<br>
+<%=f.submit "Submit" %>
+
+<% end %>
+

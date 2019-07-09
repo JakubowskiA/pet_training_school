@@ -16,6 +16,11 @@ class LessonsController < ApplicationController
     @lesson.update(lesson_params)
   end
 
+  # def search_class
+  #   price_array = @lessons.price
+  # end
+
+
   private
 
   def lesson_params
