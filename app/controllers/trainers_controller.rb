@@ -7,7 +7,7 @@ class TrainersController < ApplicationController
     @trainer = Trainer.find(params[:id])
   end
 
-  def edit 
+  def edit
     @trainer = Trainer.find(params[:id])
   end
 
@@ -18,8 +18,6 @@ class TrainersController < ApplicationController
   end
 
   def trainer_params
-    params.require(:tainer).permit(:name, :bio)
+    params.require(:tainer).permit(:name, :bio, :school_id)
   end
-
-
 end

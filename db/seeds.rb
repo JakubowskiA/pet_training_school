@@ -1,17 +1,17 @@
-Owner.destroy_all
+Trainer.destroy_all
+User.destroy_all
 Pet.destroy_all
 School.destroy_all
-Trainer.destroy_all
 Lesson.destroy_all
 Appointment.destroy_all
 
 #Owners
-o1 = Owner.create(name: "Danielle", username: "DogLvr", password_digest: "Dogs4life")
-o2 = Owner.create(name: "Cathy", username: "CrazyCatLady", password_digest: "2ManyCats")
+u1 = User.create(name: "Danielle", username: "DogLvr", password: "Dogs4life")
+u2 = User.create(name: "Cathy", username: "CrazyCatLady", password: "2ManyCats")
 #Pets
-p1 = Pet.create(name: "Fluffy", species: "dog", age: 3, gender: "Female", owner_id: o1.id)
-p2 = Pet.create(name: "Nym", species: "dog", age: 7, gender: "Female", owner_id: o1.id)
-p3 = Pet.create(name: "Whiskers", species: "cat", age: 12, gender: "Male", owner_id: o2.id)
+p1 = Pet.create(name: "Fluffy", species: "dog", age: 3, gender: "Female", user_id: u1.id)
+p2 = Pet.create(name: "Nym", species: "dog", age: 7, gender: "Female", user_id: u1.id)
+p3 = Pet.create(name: "Whiskers", species: "cat", age: 12, gender: "Male", user_id: u2.id)
 
 #Schools
 s1 = School.create(name: "Good Karma Training", location: "Montgomery St, Jersey City, NJ 07302", description: "Obedience training can improve the level of companionship between you and your dog. It is important to establish that you are the pack leader. I can teach you and your dog the rules and boundaries of a healthy pack.", phone_number: 2012527627)
@@ -59,7 +59,7 @@ l10 = Lesson.create(name: "Reliable Recall", date: DateTime.new(2019, 6, 15, 9, 
 l11 = Lesson.create(name: "Reliable Recall", date: DateTime.new(2019, 6, 22, 9, 00).to_s, capacity: 20, species: "dog", trainer_id: t11.id, school_id: s7.id, owner_participation: true, description: "Recalls or come when called is the most important behavior your dog can learn. It gives you and your dog more freedom to enjoy the outdoors and it can keep them out of harms way. This class focusses on the tools to get your dog off leash.", price: 250)
 l12 = Lesson.create(name: "Reliable Recall", date: DateTime.new(2019, 6, 29, 9, 00).to_s, capacity: 20, species: "dog", trainer_id: t11.id, school_id: s7.id, owner_participation: true, description: "Recalls or come when called is the most important behavior your dog can learn. It gives you and your dog more freedom to enjoy the outdoors and it can keep them out of harms way. This class focusses on the tools to get your dog off leash.", price: 250)
 l13 = Lesson.create(name: "Reliable Recall", date: DateTime.new(2019, 7, 13, 9, 00).to_s, capacity: 20, species: "dog", trainer_id: t11.id, school_id: s7.id, owner_participation: true, description: "Recalls or come when called is the most important behavior your dog can learn. It gives you and your dog more freedom to enjoy the outdoors and it can keep them out of harms way. This class focusses on the tools to get your dog off leash.", price: 250)
-l14 = Lesson.create(name: "Puppy Class 5", date: DateTime.new(2019, 7, 9, 19, 15).to_s, capacity: 15, species: "dog", trainer_id: t14.id school_id: s8.id, owner_participation: false, description: "Group sessions for basic obedience and behavior modification for puppies.", price: 325)
+l14 = Lesson.create(name: "Puppy Class 5", date: DateTime.new(2019, 7, 9, 19, 15).to_s, capacity: 15, species: "dog", trainer_id: t14.id, school_id: s8.id, owner_participation: false, description: "Group sessions for basic obedience and behavior modification for puppies.", price: 325)
 # l15 = Lesson.create(name: "", date: DateTime.new(2019, 8, 4, 19, 45).to_s, capacity: 10, species: "dog", school_id: s2.id, owner_participation: true, description: "", price: 45)
 
 #Appointments
