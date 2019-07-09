@@ -8,9 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
-
-    ####### need to decide redirect_to Owner or Trainer
-
+    redirect_to users_path
   end
 
   def show

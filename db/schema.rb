@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_150637) do
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.string "species"
-    t.integer "user_id"
+    t.integer "owner_id"
     t.integer "age"
     t.string "gender"
     t.datetime "created_at", null: false
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_150637) do
 
   create_table "trainers", force: :cascade do |t|
     t.string "name"
+    t.string "username"
+    t.string "password"
     t.string "bio"
     t.integer "school_id"
     t.datetime "created_at", null: false
@@ -61,10 +63,6 @@ ActiveRecord::Schema.define(version: 2019_07_09_150637) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "password_digest"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
