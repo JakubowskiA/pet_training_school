@@ -3,3 +3,5 @@
 <% @lessons.each do |lesson| %>
 <p><%= link_to lesson.name, lesson_path(lesson) %></p>
 <% end %>
+<br>
+<%=button_to "Book a class", new_appointment_path, :method => :get%>
