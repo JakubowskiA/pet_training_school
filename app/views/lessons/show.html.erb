@@ -3,3 +3,4 @@
 <p>Capacity: <%= @lesson.capacity %></p>
 <p>Price: $<%= @lesson.price %></p>
 <p>About this class: <%= @lesson.description %></p>
+<%=button_to "Return to school page", school_path(@lesson.school), :method => :get%>

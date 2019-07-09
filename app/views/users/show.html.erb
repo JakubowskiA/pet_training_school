@@ -5,12 +5,15 @@
 <%@user.pets.each do |pet|%>
 <%=link_to pet.name, pet_path(pet)%>
 <br>
+<br>
 <% end %>
 </p>
 
 
-<%= link_to "Add Your Pet", new_pet_path %><br><br>
-<%= link_to "Book Appointment", new_appointment_path %><br><br>
-<%= link_to "Check Pet Schools", schools_path %><br><br>
-<%= link_to "Search for Classes", schools_path %>
+
+
+<%= button_to "Add Your Pet", new_pet_path, :method => :get %><br><br>
+<%= button_to "Book Appointment", new_appointment_path, :method => :get %><br><br>
+<%= button_to "Check Pet Schools", schools_path, :method => :get %><br><br>
+<%= button_to "Search for Classes", lessons_path, :method => :get %>
 

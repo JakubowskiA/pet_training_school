@@ -20,7 +20,6 @@ class LessonsController < ApplicationController
   #   price_array = @lessons.price
   # end
 
-
   private
 
   def lesson_params

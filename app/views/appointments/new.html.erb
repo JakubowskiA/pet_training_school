@@ -2,14 +2,12 @@
 <br>
 <%=form_for @appointment do |f|%>
 <label>Which pet is taking this class?</label>
-<<<<<<< HEAD
 <%=collection_select(:appointment, :pet_id, @user_pets, :id, :name, prompt: true)%>
-=======
-<%=collection_select(:appointment, :pet_id, @user.pets, :id, :name, prompt: true)%>
->>>>>>> cdd4754710ce1598470c256b2b4baa9bb5ec7026
+<br>
 <br>
 <label>Which class are you booking?</label>
 <%=collection_select(:appointment, :lesson_id, @lessons, :id, :name, prompt: true)%>
+<br>
 <br>
 <%=f.submit%>
 <% end %>

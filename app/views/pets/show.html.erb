@@ -6,6 +6,13 @@
 <p>Belongs to: <%=@pet.user.name%></p>
 <p><%=button_to "Delete", @pet, method: :delete%></p>
 
+<h2><%=@pet.name%>'s Classes</h2>
+<%@pet.lessons.each do |lesson|%>
+<%=lesson.name%>
+<br>
+<% end %>
+
+<br><br>
 <%= link_to "Edit Pet Information",edit_pet_path(@pet) %><br><br>
 <%= link_to "Book Appointment", new_appointment_path %><br><br>
 <%= link_to "Back to User Homepage", user_path(@user) %><br><br>

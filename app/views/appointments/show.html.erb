@@ -4,6 +4,9 @@
 <br>
 <h2>Class: <%=@appointment.lesson.name%></h2>
 <br>
-<h2>Date: <%=@appointment.lesson.date.strftime(%d%m%Y)%></h2>
+<h2>Date: <%=@appointment.lesson.date.strftime("%B %e, %Y")%></h2>
+<br>
+<h2>Location: <%=@appointment.lesson.school.location%></h2>
 <br>
 <%=button_to "Cancel", @appointment, :method => :delete%>
+<%=button_to "Return to Homepage", user_path(@user), :method => :get%>

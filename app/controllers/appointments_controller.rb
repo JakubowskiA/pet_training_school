@@ -7,8 +7,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
-    @appointment.create(appointment_params)
+    @user = User.find(session[:user_id])
+    @appointment = Appointment.create(appointment_params)
     if @appointment.save
       redirect_to appointment_path(@appointment)
     else
@@ -18,10 +18,13 @@ class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def destroy
+    @user = User.find(session[:user_id])
     @appointment = Appointment.find(params[:id]).destroy
+    redirect_to user_path(@user)
   end
 
   private
