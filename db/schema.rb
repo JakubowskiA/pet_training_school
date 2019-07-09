@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_204350) do
+ActiveRecord::Schema.define(version: 2019_07_09_150637) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "pet_id"
@@ -33,18 +33,10 @@ ActiveRecord::Schema.define(version: 2019_07_08_204350) do
     t.integer "price"
   end
 
-  create_table "owners", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.string "species"
-    t.integer "owner_id"
+    t.integer "user_id"
     t.integer "age"
     t.string "gender"
     t.datetime "created_at", null: false
@@ -57,12 +49,11 @@ ActiveRecord::Schema.define(version: 2019_07_08_204350) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "phone_number"
   end
 
   create_table "trainers", force: :cascade do |t|
     t.string "name"
-    t.string "username"
-    t.string "password_digest"
     t.string "bio"
     t.integer "school_id"
     t.datetime "created_at", null: false

@@ -1,12 +1,15 @@
-<%= form_for @user do |f|%>
-    <%=f.label :name%>
-    <%=f.text_field :name%>
+<h1>Create an account</h1>
+<br>
+<%=form_for @owner do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br>
+<%=f.label :username%>
+<%=f.text_field :username%>
+<br>
+<%=f.label :password%>
+<%=f.password_field :password%>
+<br>
+<%=f.submit "Sign up"%>
 
-    <%=f.label :username%>
-    <%=f.text_field :username%>
-
-    <%=f.label :password%>
-    <%=f.password_field :password%>
-
-    <%=f.submit "sign up"%>
-<%end%>
+<% end %>
