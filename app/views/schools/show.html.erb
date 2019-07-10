@@ -1,14 +1,19 @@
 <h1><%=@school.name%></h1>
-<h3>Location: <%=@school.location%></h3>
-<h3>About <%=@school.name%>: <%=@school.description%></h3>
-<h3><%=@school.name%> offers the following courses.</h3>
-<h4>
+<br>
+<h2>About <%=@school.name%>: </h2>
+<h3><%=@school.description%></h3>
+<h2><%=@school.name%> offers the following courses.</h2>
+<h3>
 <%@school.lessons.each do |lesson|%>
 <%=link_to lesson.name, lesson_path(lesson)%>
 <br>
 <% end %>
-</h4>
+</h3>
 <%=button_to "See all schools", schools_path, :method => :get%>
+<footer>
+<br>
+<h3><%=@school.location%> | <%=number_to_phone(@phone)%> </h3> 
+</footer>
 
 
 

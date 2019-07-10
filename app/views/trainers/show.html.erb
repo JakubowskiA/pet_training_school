@@ -1,8 +1,8 @@
-<p>Name: <%= @trainer.name %></p>
+<h1><%= @trainer.name %></h1>
 
-<p>Bio: <%= @trainer.bio %></p>
+<h2>Bio: <%= @trainer.bio %></h2>
 <h2>Classes <%= @trainer.name %> teaches: </h2>
-<% @trainer.lessons.each do |lesson| %>
+<h3><% @trainer.lessons.each do |lesson| %>
   <%=link_to lesson.name, lesson_path(lesson)%>
   <br>
-<% end %>
+<% end %></h3>

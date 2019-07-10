@@ -1,6 +1,7 @@
 <h1><%= @lesson.name %></h1>
-<p>Date and time: <%= Time.at(@lesson.date).strftime("%B %e, %Y at %I:%M %p") %></p>
-<p>Capacity: <%= @lesson.capacity %></p>
-<p>Price: $<%= @lesson.price %></p>
-<p>About this class: <%= @lesson.description %></p>
+<h3>Date and time: <%= Time.at(@lesson.date).strftime("%B %e, %Y at %I:%M %p") %></h3>
+<h3>Capacity: <%= @lesson.capacity %></h3>
+<h3>Price: $<%= @lesson.price %></h3>
+<h3>Trainer: <%=link_to @lesson.trainer.name, trainer_path(@lesson.trainer)%></h3>
+<h3>About this class: <%= @lesson.description %></h3>
 <%=button_to "Return to school page", school_path(@lesson.school), :method => :get%>
