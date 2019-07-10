@@ -1,6 +1,7 @@
 class SchoolsController < ApplicationController
   def index
     @schools = School.all
+    @user = User.find(session[:user_id])
   end
 
   def show

@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :authorized?, except: [:new, :create]
 
-  def index 
-    @users = User.all 
+  def index
+    @users = User.all
   end
 
   def new
@@ -27,6 +27,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
+  end
+
+  def pets
+    @user = User.find(params[:id])
+    @pets = @user.pets
   end
 
   private
