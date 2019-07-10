@@ -1,20 +1,21 @@
 header{
     top : 0;
     text-align : center;
-    font-size : 20pt;
-    height : 10%;
-    background-color: midnightblue;
-    padding:10px;
+    font-size : 24pt;
+    background-color: #193A94;
+    padding:15px;
     color: whitesmoke;
     width: 100%;
+    font-family: 'Literata', serif;
 }
 
 nav{
     text-align : center;
     font-size : 14pt;  
     padding: 10px; 
-    background-color:#191970;
+    background-color:#193A94;
     color: whitesmoke;
+    
 }
 
 .nav_elements {
@@ -41,13 +42,26 @@ h1{
 
 #login_background{
     background-image: url("http://www.portoalegre.travel/upload/b/26/261645_dog-hd-wallpaper-1080p.jpg");
-    height:150vh;
+    width: 100%;
+    background-size: cover;
+    height:95vh;
+    background-position-y: 15%;
+    background-position-x: -5%
+    z-index: 1;
 }
 
 #login_section{
     text-align: center;
     padding: 15px;
-    background: hsv(#193A94);
+    background: #193A94;
+    width: 25%;
+    margin-left: 48%;
+    align-items: center;
+    color: whitesmoke;
+    z-index: 2;
+    position: relative;
+    top: 8%;
+    border-radius: 150px;
 }
 
 #pet_pic{
