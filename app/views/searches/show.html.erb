@@ -1,0 +1,16 @@
+<h1>Search Result</h1>
+
+<p><%= button_to 'Back to Advanced Search', new_search_path, :method => :get %></p>
+<% if @search.search_lessons.empty? %>
+    <p>No Records Found</p>
+<% else %>
+    <% @search.search_lessons.each do |c| %>
+        <h1><%= c.name %></h1>
+        <p>Date: <%= c.date %></p>
+        <p>Species: <%= c.species %></p>
+        <p>Capacity: <%= c.capacity %></p>
+        <p>Own Participation: <%= c.owner_participation %></p>
+        <p>Description: <%= c.description %></p>
+        <p>Price: $<%= c.price %></p>
+    <% end %>
+<% end %>

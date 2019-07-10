@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_150637) do
+ActiveRecord::Schema.define(version: 2019_07_10_141542) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "pet_id"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 2019_07_09_150637) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "phone_number"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.decimal "min_price"
+    t.decimal "max_price"
+    t.string "trainer"
+    t.string "species"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trainers", force: :cascade do |t|
