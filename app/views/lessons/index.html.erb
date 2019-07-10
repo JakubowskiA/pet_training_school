@@ -1,7 +1,7 @@
 <h1>All Classes</h1>
 <br>
 <% @lessons.each do |lesson| %>
-<p><%= link_to lesson.name, lesson_path(lesson) %></p>
+<p><%= link_to lesson.name, lesson_path(lesson) %>, <%= Time.at(lesson.date).strftime("%B %e, %Y at %I:%M %p") %></p>
 <% end %>
 <br>
 <%=button_to "Book a class", new_appointment_path, :method => :get%>
