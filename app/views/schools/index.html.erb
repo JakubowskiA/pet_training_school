@@ -1,4 +1,4 @@
 <h1>All Schools</h1>
 <% @schools.each do |school| %>
-<h3><%= link_to school.name, school_path(school) %>, <%= school.location %></h3>
+<p><%= link_to school.name, school_path(school) %>, <%= school.location %></p>
 <% end %>

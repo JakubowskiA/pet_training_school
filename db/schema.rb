@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_141542) do
+ActiveRecord::Schema.define(version: 2019_07_10_193057) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "pet_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_07_10_141542) do
     t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "schools", force: :cascade do |t|

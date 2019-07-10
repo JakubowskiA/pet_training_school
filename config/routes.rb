@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :searches
   get "/login", to: "sessions#new", as: "login"
   post "/sessions", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy", as: "logout"
+  get "/logout", to: "sessions#destroy", as: "logout"
   get "/users/:id/pets", to: "users#pets", as: "user_pets"
 end

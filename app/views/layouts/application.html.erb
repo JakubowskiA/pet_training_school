@@ -7,13 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-
-  <body>
+  <header>
+  Best Paw Forward
   <%if @user%>
-  <nav><a href='<%=user_path(@user)%>'>My Profile</a> | <a href='<%=user_pets_path(@user)%>'>My Pets</a> | <a href='<%=schools_path%>'>Find a School</a> | <a href='<%=lessons_path%>'>Find a Class</a></nav>
+  <nav><a class = "nav_elements" href='<%=user_path(@user)%>'>My Profile</a>  |  <a class = "nav_elements" href='<%=user_pets_path(@user)%>'>My Pets</a>  |  <a class = "nav_elements" href='<%=schools_path%>'>Find a School</a>  |  <a class = "nav_elements" href='<%=lessons_path%>'>Find a Class</a>  | <a class = "nav_elements" href='<%=logout_path%>'>Logout</a></nav>
   <% end %>
+  </header>
+  <body>
     <%= yield %>
 
   </body>
+  <footer>
+  </footer>
 </html>

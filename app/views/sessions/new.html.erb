@@ -1,3 +1,5 @@
+<div id="login_background">
+<section id="login_section">
 <h1>Login</h1>
 <%=form_tag "/sessions" do%>
     <%=label_tag :username%>
@@ -10,3 +12,7 @@
 <% end %>
 
 <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+</section>
+</div>
+
+

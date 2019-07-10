@@ -9,9 +9,9 @@ Appointment.destroy_all
 u1 = User.create(name: "Danielle", username: "DogLvr", password: "Dogs4life")
 u2 = User.create(name: "Cathy", username: "CrazyCatLady", password: "2ManyCats")
 #Pets
-p1 = Pet.create(name: "Fluffy", species: "dog", age: 3, gender: "Female", user_id: u1.id)
-p2 = Pet.create(name: "Nym", species: "dog", age: 7, gender: "Female", user_id: u1.id)
-p3 = Pet.create(name: "Whiskers", species: "cat", age: 12, gender: "Male", user_id: u2.id)
+p1 = Pet.create(name: "Fluffy", species: "dog", age: 3, gender: "Female", user_id: u1.id, img_url: "/app/assets/images/dog1.jpg")
+p2 = Pet.create(name: "Nym", species: "dog", age: 7, gender: "Female", user_id: u1.id, img_url: "http://santansun.com/wp-content/uploads/2018/11/5b7fdeab1900001d035028dc.jpeg")
+p3 = Pet.create(name: "Whiskers", species: "cat", age: 12, gender: "Male", user_id: u2.id, img_url: "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn")
 
 #Schools
 s1 = School.create(name: "Good Karma Training", location: "Montgomery St, Jersey City, NJ 07302", description: "Obedience training can improve the level of companionship between you and your dog. It is important to establish that you are the pack leader. I can teach you and your dog the rules and boundaries of a healthy pack.", phone_number: 2012527627)

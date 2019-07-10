@@ -1,1 +1,58 @@
+header{
+    top : 0;
+    text-align : center;
+    font-size : 20pt;
+    height : 10%;
+    background-color: midnightblue;
+    padding:10px;
+    color: whitesmoke;
+    width: 100%;
+}
+
+nav{
+    text-align : center;
+    font-size : 14pt;  
+    padding: 10px; 
+    background-color:#191970;
+    color: whitesmoke;
+}
+
+.nav_elements {
+    color: whitesmoke;
+    text-decoration:none;
+  }
+
+body {
+    /* width: 90% */
+}
+
+footer{
+    bottom : 0;
+    text-align : center;
+}
+
+h1{
+    margin: 5px;
+}
+
+.login_page{
+    background-color: hsv(#193A94);
+}
+
+#login_background{
+    background-image: url("http://www.portoalegre.travel/upload/b/26/261645_dog-hd-wallpaper-1080p.jpg");
+    height:150vh;
+}
+
+#login_section{
+    text-align: center;
+    padding: 15px;
+    background: hsv(#193A94);
+}
+
+#pet_pic{
+    height:200px;
+    width:auto;
+}
+
 
