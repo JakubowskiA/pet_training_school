@@ -10,7 +10,9 @@
   </head>
 
   <body>
-  <nav><a href='/users/:id'>Profile</a> | <a href='/users'>Users</a></nav>
+  <%if @user%>
+  <nav><a href='<%=user_path(@user)%>'>Profile</a> | <a href='<%=%>'>Users</a></nav>
+  <% end %>
     <%= yield %>
 
   </body>
