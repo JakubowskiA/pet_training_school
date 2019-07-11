@@ -19,7 +19,7 @@ class PetsController < ApplicationController
     @user = User.find(session[:user_id])
   end
 
-  def edit 
+  def edit
     @pet = Pet.find(params[:id])
   end
 
@@ -31,7 +31,8 @@ class PetsController < ApplicationController
 
   def destroy
     @pet = Pet.find(params[:id]).destroy
-    redirect_to pets_path
+    @user = User.find(session[:user_id])
+    redirect_to user_path(@user)
   end
 
   private
