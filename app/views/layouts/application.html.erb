@@ -12,7 +12,7 @@
   </head>
   <header>
   Best Paw Forward
-  <%if @user_id%>
+  <%if session[:user_id]%>
   <nav><a class = "nav_elements" href='<%=user_path(@user)%>'>My Profile</a>  |  <a class = "nav_elements" href='<%=user_pets_path(@user)%>'>My Pets</a>  |  <a class = "nav_elements" href='<%=schools_path%>'>Find a School</a>  |  <a class = "nav_elements" href='<%=lessons_path%>'>Find a Class</a>  | <a class = "nav_elements" href='<%=logout_path%>'>Logout</a></nav>
   <% end %>
   </header>
