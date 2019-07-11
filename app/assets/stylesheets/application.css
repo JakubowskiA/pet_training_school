@@ -23,17 +23,26 @@ nav{
     text-decoration:none;
   }
 
-body {
-    /* width: 90% */
+.page{
+    width: 94%;
+    margin-left: 3%
 }
+
+
 
 footer{
     bottom : 0;
     text-align : center;
+    background-color: #193A94;
+    color: whitesmoke;
+    margin: 0px;
 }
 
 h1{
-    margin: 5px;
+   position: relative;
+   top: 10px;
+   text-align : center;
+   font-family: 'Literata', serif;
 }
 
 .login_page{
@@ -47,7 +56,7 @@ h1{
     height:95vh;
     background-position-y: 15%;
     background-position-x: -5%
-    z-index: 1;
+    
 }
 
 #login_section{
@@ -55,18 +64,23 @@ h1{
     padding: 15px;
     background: #193A94;
     width: 25%;
-    margin-left: 48%;
+    margin-left: 50%;
     align-items: center;
     color: whitesmoke;
-    z-index: 2;
     position: relative;
     top: 8%;
     border-radius: 150px;
+    font-family: 'Literata', serif;
 }
 
 #pet_pic{
     height:200px;
     width:auto;
+}
+
+#footer{
+    width: 100%;
+    padding: 2%;
 }
 
 

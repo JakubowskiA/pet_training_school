@@ -1,10 +1,13 @@
 <h1><%=@user.name%>'s Profile</h1>
+<br><br>
+<div class="page">
 <h3>Username: <%=@user.username%></h3>
+<br>
 <h3><%=@user.name%>'s Pets</h3>
 <p>
 <%@user.pets.each do |pet|%>
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 20rem;">
   <img class="card-img-top" src="<%=pet.img_url%>">
   <div class="card-body">
     <p class="card-text"><%=link_to pet.name, pet_path(pet)%></p>
@@ -13,12 +16,10 @@
 <% end %>
 </p>
 
-
-
-
 <%= button_to "Add a Pet", new_pet_path, :method => :get %>
 <%= button_to "Book Appointment", new_appointment_path, :method => :get %>
 <%= button_to "Check Pet Schools", schools_path, :method => :get %>
+</div>
 
 
 

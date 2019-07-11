@@ -1,6 +1,7 @@
 <div id="login_background">
 <section id="login_section">
 <h1>Login</h1>
+<br>
 <%=form_tag "/sessions" do%>
     <%=label_tag :username%>
     <%=text_field_tag :username%><br><br>
@@ -10,20 +11,19 @@
 
     <%=submit_tag "Log in"%>
 <% end %>
-
+<br>
 <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
 </section>
 </div>
 
 
-<footer class="container py-5">
+<footer id="footer">
     <div class="row">
         <div class="col-6 col-md">
             <h5>© Best Paw Forward</h5>
             <p>Copyright 2019 | All Rights Reserved</p>
         </div>
 
-       
 
         <div class="col-6 col-md">
             <h5>Connect with us on Medium</h5>
