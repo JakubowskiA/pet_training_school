@@ -1,14 +1,15 @@
 <h1><%=@user.name%>'s Pets</h1>
 <br>
-
+<div class="page">
 <%@user.pets.each do |pet|%>
 <div>
 <h2><%=link_to pet.name, pet_path(pet)%></h2>
+<img src="<%=pet.img_url%>" id="pet_pic">
 <h3>Age: <%=pet.age%></h3>
 <h3>Species: <%=pet.species%></h3>
 <h3>Gender: <%=pet.gender%></h3>
-<img src="<%=pet.img_url%>" class="pet_pic">
 <div>
 <br>
 <br>
 <% end %>
+</div>

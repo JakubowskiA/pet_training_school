@@ -1,11 +1,16 @@
+<br>
 <h1><%=@school.name%></h1>
 <br>
+<div class="page">
 <h2>About <%=@school.name%>: </h2>
+<br>
 <h3><%=@school.description%></h3>
+<br>
 <%if @school.lessons.count > 0%>
 <h2><%=@school.name%> offers the following courses.</h2>
 <h3>
 <%@school.lessons.each do |lesson|%>
+<br>
 <%=link_to lesson.name, lesson_path(lesson)%>
 <br>
 <% end %>
@@ -13,7 +18,10 @@
 <h3>This school does not currently offer any classes.</h3>
 <%end%>
 </h3>
+<br>
 <%=button_to "See all schools", schools_path, :method => :get%>
+<br>
+</div>
 <footer>
 <br>
 <h3><%=@school.location%> | <%=number_to_phone(@phone)%> </h3> 

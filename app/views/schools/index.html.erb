@@ -1,4 +1,8 @@
+<br>
 <h1>All Schools</h1>
+<br><br>
+<div class="page">
 <% @schools.each do |school| %>
 <p><%= link_to school.name, school_path(school) %>, <%= school.location %></p>
 <% end %>
+</div>

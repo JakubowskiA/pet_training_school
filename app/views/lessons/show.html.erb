@@ -1,7 +1,17 @@
+<br>
 <h1><%= @lesson.name %></h1>
+<br>
+<div class="page">
 <h3>Date and time: <%= Time.at(@lesson.date).strftime("%B %e, %Y at %I:%M %p") %></h3>
+<br>
 <h3>Capacity: <%= @lesson.capacity %></h3>
+<br>
 <h3>Price: $<%= @lesson.price %></h3>
+<br>
 <h3>Trainer: <%=link_to @lesson.trainer.name, trainer_path(@lesson.trainer)%></h3>
+<br>
 <h3>About this class: <%= @lesson.description %></h3>
+<br>
 <%=button_to "Return to school page", school_path(@lesson.school), :method => :get%>
+</div>
+
