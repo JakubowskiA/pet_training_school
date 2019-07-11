@@ -1,5 +1,6 @@
 <h1><%=@pet.name.capitalize%></h1>
 <div class="page">
+<br>
 <%if @pet.img_url%>
 <img src="<%=@pet.img_url%>" id="pet_pic">
 <%end%>
@@ -20,7 +21,7 @@
 <br>
 <% end %>
 <%else%>
-<h2><%=@pet.name%> has not taken any classes</h2>
+<h2><%=@pet.name.capitalize%> has not taken any classes</h2>
 <% end %>
 
 <br>

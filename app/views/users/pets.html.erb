@@ -1,10 +1,11 @@
+<br>
 <h1><%=@user.name.capitalize%>'s Pets</h1>
 <br><br>
 <div class="page">
 <div>
 <div style='display: flex; flex-direction: row; flex-wrap: wrap;'>
 <%@user.pets.each do |pet|%>
-<div class="card" style="width: 27%; height:30%; margin-right:9%;">
+<div class="card" style="width: 27%; height:30%; margin-right:5%; margin-top:2%">
 <%if pet.img_url%>
   <img class="card-img-top" src="<%=pet.img_url%>" style="height: 65%; max-height: 200px;">
   <%end%>

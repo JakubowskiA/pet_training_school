@@ -1,19 +1,24 @@
+<br>
 <h1>Edit a Pet</h1>
 <br>
+<div class="page">
 <%=form_for @pet do |f|%>
 <%=f.label :name%>
 <%=f.text_field :name%>
-<br>
+<br><br>
 <%=f.label :species%>
-<%=f.text_field :species%>
-<br>
+<%=f.select :species, ["Cat", "Dog", "Other"]%>
+<br><br>
 <%=f.label :age %>
-<%=f.text_field :age %>
-<br>
+<%=f.number_field :age %>
+<br><br>
 <%=f.label :gender %>
-<%=f.text_field :gender %>
-<br>
+<%=f.select :gender, ['Female', 'Male']%>
+<br><br>
+<label>Enter a link to your pet's picture</label>
+<%=f.text_field :img_url%>
+<br><br>
 <%=f.submit "Submit" %>
 
 <% end %>
-
+</div>
