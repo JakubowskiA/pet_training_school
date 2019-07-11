@@ -1,14 +1,18 @@
-<h1><%=@pet.name%></h1>
+<h1><%=@pet.name.capitalize%></h1>
 <div class="page">
 <img src="<%=@pet.img_url%>" id="pet_pic">
-<h4>Species: <%=@pet.species%></h4>
+<br>
+<h4>Species: <%=@pet.species.capitalize%></h4>
+<br>
 <h4>Age: <%=@pet.age%></h4>
-<h4>Gender: <%=@pet.gender%></h4>
-
-<h4>Belongs to: <%=@pet.user.name%></h4>
-
+<br>
+<h4>Gender: <%=@pet.gender.capitalize%></h4>
+<br>
+<h4>Belongs to: <%=@pet.user.name.capitalize%></h4>
+<br>
 <%if @pet.lessons.count > 0%>
-<h4><%=@pet.name%>'s Classes</h4>
+<h4><%=@pet.name.capitalize%>'s Classes</h4>
+<br>
 <%@pet.lessons.each do |lesson|%>
 <%=link_to lesson.name, lesson_path(lesson)%>
 <br>

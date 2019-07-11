@@ -2,9 +2,9 @@
 <h1><%= @trainer.name %></h1>
 <br>
 <div class="page">
-<h2>Bio: <%= @trainer.bio %></h2>
+<h3>Bio: <%= @trainer.bio %></h3>
 <br>
-<h2>Classes <%= @trainer.name %> teaches: </h2>
+<h3>Classes <%= @trainer.name %> teaches: </h3>
 <br>
 <h4><% @trainer.lessons.each do |lesson| %>
   <%=link_to lesson.name, lesson_path(lesson)%>
