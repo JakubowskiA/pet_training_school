@@ -1,14 +1,24 @@
-<h1><%=@user.name%>'s Pets</h1>
+<h1><%=@user.name.capitalize%>'s Pets</h1>
+<br><br>
+<div class="page">
+<div>
+<div style='display: flex; flex-direction: row; flex-wrap: wrap;'>
+<%@user.pets.each do |pet|%>
+<div class="card" style="width: 27%; height:30%; margin-right:10%;">
+  <img class="card-img-top" src="<%=pet.img_url%>" style="height: 65%; max-height: 200px;">
+  <div class="card-body">
+    <p class="card-text" style="text-align:center; font-size:16pt"><%=link_to pet.name.capitalize, pet_path(pet)%></p>
+    <p class="card-text" style="text-align:center; font-size:12pt">Age: <%=pet.age%></p>
+    <p class="card-text" style="text-align:center; font-size:12pt">Species: <%=pet.species.capitalize%></p>
+    <p class="card-text" style="text-align:center; font-size:12pt">Gender: <%=pet.gender.capitalize%></p>
+  </div>
+</div>
+<% end %>
+
+</div>
+<br>
+<%= button_to "Add a Pet", new_pet_path, :method => :get %>
+</div>
 <br>
 
-<%@user.pets.each do |pet|%>
-<div>
-<h2><%=link_to pet.name, pet_path(pet)%></h2>
-<h3>Age: <%=pet.age%></h3>
-<h3>Species: <%=pet.species%></h3>
-<h3>Gender: <%=pet.gender%></h3>
-<img src="<%=pet.img_url%>" class="pet_pic">
-<div>
-<br>
-<br>
-<% end %>
+

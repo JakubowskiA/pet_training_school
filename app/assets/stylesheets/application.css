@@ -28,6 +28,20 @@ nav{
     margin-left: 3%
 }
 
+.new_user{
+    text-align: center;
+    padding: 10px;
+    background: #193A94;
+    width: 30%;
+    align-items: center;
+    color: whitesmoke;
+    position: relative;
+    top: 23%;
+    border-radius: 150px;
+    font-family: 'Literata', serif;
+    margin-left: 53%;
+}
+
 
 
 footer{
@@ -71,6 +85,13 @@ h1{
     top: 8%;
     border-radius: 150px;
     font-family: 'Literata', serif;
+}
+
+#user_form{
+    position: relative;
+    /* left: 3%; */
+    right: 20%;
+    
 }
 
 #pet_pic{

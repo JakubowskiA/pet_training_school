@@ -1,23 +1,35 @@
+<<<<<<< HEAD
 
-<h1><%=@school.name%></h1>
+=======
 <br>
-<h2>About <%=@school.name%>: </h2>
-<h3><%=@school.description%></h3>
+>>>>>>> b1e8768d03657e75f3931dd1889229972ace4f87
+<h1><%=@school.name%></h1>
+<br><br>
+<div class="page">
+<h3>About <%=@school.name%></h3>
+<br>
+<h4><%=@school.description%></h4>
+<br>
 <%if @school.lessons.count > 0%>
-<h2><%=@school.name%> offers the following courses.</h2>
-<h3>
+<h3><%=@school.name%> offers the following courses.</h3>
+<h4>
 <%@school.lessons.each do |lesson|%>
+<br>
 <%=link_to lesson.name, lesson_path(lesson)%>
 <br>
 <% end %>
 <%else%>
-<h3>This school does not currently offer any classes.</h3>
+<h4>This school does not currently offer any classes.</h4>
 <%end%>
-</h3>
+</h4>
+<br>
 <%=button_to "See all schools", schools_path, :method => :get%>
+<br>
+</div>
 <footer>
 <br>
-<h3><%=@school.location%> | <%=number_to_phone(@phone)%> </h3> 
+<h4><%=@school.name%> | <%=@school.location%> | <%=number_to_phone(@phone)%> </h4> 
+<br>
 </footer>
 
 
