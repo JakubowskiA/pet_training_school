@@ -1,4 +1,13 @@
 <h1>All Schools</h1>
-<% @schools.each do |school| %>
-<p><%= link_to school.name, school_path(school) %>, <%= school.location %></p>
-<% end %>
+<br>
+<img src="https://envirowagg.com/wp-content/uploads/Cats-and-Dogs-OLS-image.jpg">
+<br><br>
+<div class="row">
+        <% @schools.each do |school| %>
+    <div class="col-md-4"><br><br>  
+            <h4 class="schoolname"><%= school.name %></h4><br>
+            <p><%= school.location %></p><br>
+        <a class="btn btn-secondary" href="<%=school_path(school)%>" role="button">More &raquo;</a><br><br>
+    </div>
+        <% end %>
+</div>

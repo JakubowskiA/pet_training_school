@@ -83,4 +83,46 @@ h1{
     padding: 2%;
 }
 
+.row {
+    display:flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: -15px;
+}
 
+.col-md-4 {
+    flex:33.33333%;
+    max-width: 33.3333%;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn {
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:0px;
+}
+
+.schoolclass {
+    text-align: center;
+}
+
+.schoolname {
+    color: #193A94;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.table-striped {
+    text-align: center;
+}

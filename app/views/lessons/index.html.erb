@@ -1,9 +1,23 @@
 <h1>All Classes</h1>
 <br>
-<% @lessons.each do |lesson| %>
-<p><%= link_to lesson.name, lesson_path(lesson) %>, <%= Time.at(lesson.date).strftime("%B %e, %Y at %I:%M %p") %></p>
-<% end %>
-<br>
-<%=button_to "Book a class", new_appointment_path, :method => :get%>
-<br>
-<%=button_to "Advanced Search", new_search_path, :method => :get%>
+<a class= "classbutton" href="<%=new_appointment_path%>" role="button">Book a class &raquo;</a>
+&emsp;&nbsp;
+<a href="<%=new_search_path%>" role="button">Advanced Search &raquo;</a><br><br>
+
+<table class="table table-striped ">
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Time & Date</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @lessons.each do |lesson| %>
+    <tr>
+      <td><%= link_to lesson.name, lesson_path(lesson) %></td>
+      <td><%= Time.at(lesson.date).strftime("%B %e, %Y at %I:%M %p") %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
