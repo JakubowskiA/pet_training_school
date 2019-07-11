@@ -5,11 +5,11 @@
 <br>
 <h3><%=@user.name.capitalize%>'s Pets</h3>
 <p>
-<div style='display: grid; grid-template-columns: 1fr 1fr'>
+<div style='display: flex; flex-direction: row; flex-wrap: wrap;'>
 <%@user.pets.each do |pet|%>
 
-<div class="card" style="width: 20rem; height:250px">
-  <img class="card-img-top" src="<%=pet.img_url%>" style="height: 75%">
+<div class="card" style="width: 20rem; height:20%; margin-right:5%;">
+  <img class="card-img-top" src="<%=pet.img_url%>" style="height: 65%; max-height: 200px;">
   <div class="card-body">
     <p class="card-text" style="text-align:center; font-size:14pt"><%=link_to pet.name.capitalize, pet_path(pet)%></p>
     
